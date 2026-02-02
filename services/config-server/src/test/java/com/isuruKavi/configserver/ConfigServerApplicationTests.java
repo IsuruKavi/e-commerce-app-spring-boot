@@ -1,10 +1,10 @@
-package com.isuruKavi.config.server;
+package com.isuruKavi.configserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationTests {
+class ConfigServerApplicationTests {
 
 	@Test
 	void contextLoads() {
