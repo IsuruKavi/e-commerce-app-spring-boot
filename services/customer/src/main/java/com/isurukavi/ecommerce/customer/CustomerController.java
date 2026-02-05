@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.ResourceBundle;
 
 @RestController
 @RequestMapping("/api/v1/customer")
@@ -36,4 +37,10 @@ public class CustomerController {
     public ResponseEntity<CustomerResponse> findById(@PathVariable("customer-id") String customerId){
         return ResponseEntity.ok(service.findById(customerId));
     }
+
+   @DeleteMapping("/{customer-id}")
+   public ResponseEntity<Void> delete(@PathVariable("customer-id") String customerId){
+        service.deleteCustomer(customerId);
+        return ResponseEntity.accepted().build();
+   }
 }
