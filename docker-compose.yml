@@ -1,7 +1,7 @@
 services:
   postgres:
     container_name: ms_pg_sql
-    image: postgres:16.5
+    image: postgres
     environment:
       POSTGRES_USER: isuru_kavi
       POSTGRES_PASSWORD: isuru_kavi
